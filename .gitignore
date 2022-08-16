@@ -1,4 +1,5 @@
-example.exe
+bin
 K_imag.txt
 K_mag.txt
 K_real.txt
+.vscode
