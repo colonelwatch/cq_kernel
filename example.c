@@ -33,6 +33,7 @@ int main(){
         .fmin = MIN_FREQUENCY,
         .fmax = MAX_FREQUENCY,
         .fs = SAMPLING_FREQUENCY,
+        .window_type = HAMMING,
         .min_val = MIN_VAL
     };
 
