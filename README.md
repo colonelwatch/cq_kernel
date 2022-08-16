@@ -7,21 +7,21 @@ While initalizing, this library is relatively slow and memory-heavy: it needs to
 An example has been provided. Using `#define`'d parameters, it generates and dumps its kernels in a format that can be pasted into Excel or MATLAB. To get the floating-point version, in the command line run:
 
 ```
-make float
-./example
+make example
+./bin/example
 ```
 
 To get the Q15 version, in the command line run:
 
 ```
-make Q15
-./example
+make example CFLAGS="-D FIXED_POINT=16"
+./bin/example
 ```
 
 There is a Q31 version that is currently broken. To try that, in the command line run:
 ```
-make Q31
-./example
+make example CFLAGS="-D FIXED_POINT=32"
+./bin/example
 ```
 
 Here is what that Excel plot of the kernels ("K_mag.txt") looks like. It is very similar to Figure 2 in the CQT paper:

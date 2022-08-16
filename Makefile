@@ -1,6 +1,4 @@
-float:
-	gcc example.c cq_kernel.c kiss_fft.c kiss_fftr.c -o example
-Q15:
-	gcc -D FIXED_POINT=16 example.c cq_kernel.c kiss_fft.c kiss_fftr.c -o example
-Q31:
-	gcc -D FIXED_POINT=32 example.c cq_kernel.c kiss_fft.c kiss_fftr.c -o example
+CFLAGS := 
+
+example: example.c cq_kernel.c kiss_fft.c kiss_fftr.c
+	gcc $(CFLAGS) example.c cq_kernel.c kiss_fft.c kiss_fftr.c -lm -o bin/example
